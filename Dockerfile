@@ -3,7 +3,7 @@ RUN mkdir /ng-app
 WORKDIR /ng-app
 COPY . .
 RUN npm ci
-RUN npm run build -- ---output-path=dist
+RUN npm run build 
 
 FROM nginx:1.13.3-alpine
 COPY config/default.conf /etc/nginx/conf.d/
