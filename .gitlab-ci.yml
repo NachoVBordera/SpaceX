@@ -45,7 +45,7 @@ deploy:
     - docker push $DOCKER_HUB_USER/$CI_PROJECT_NAME:$PACKAGE_VERSION
 
 hosting:
-  state: hosting
+  stage: hosting
   image: node:18.10.0-alpine3.16
   dependencies:
     - build
