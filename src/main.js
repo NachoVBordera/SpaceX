@@ -1,4 +1,4 @@
-//import "./app-element";
+import "./app-element";
 import { Router } from "@vaadin/router";
 import "./main.css";
 import "./app-element";
