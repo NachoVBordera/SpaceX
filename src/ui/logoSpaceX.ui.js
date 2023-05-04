@@ -4,7 +4,7 @@ export class MainLogo extends LitElement {
   render() {
     return html`
       <section class="mainLogo">
-        <img src="../../public/icons/spacex_logo.png" />
+        <img />
       </section>
     `;
   }

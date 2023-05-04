@@ -37,32 +37,41 @@ export class UpcomingLaunch extends LitElement {
   render() {
     return html`
       <article class="upcomingLaunchArticle">
-      
         <h2>Upcoming Launch</h2>
 
-      <section class="upcomingLaungSection">
+        <section class="upcomingLaungSection">
+          <ul class="listDetail">
+            <li>
+              <p>MISSION NAME</p>
+              <p>${this.upcommingLaunch?.name}</p>
+            </li>
+            <li>
+              <p>ROCKET</p>
+              <p>Falcon-9</p>
+            </li>
+          </ul>
 
-      <ul class="listDetail">
-        <li>
-          <p>MISSION NAME</p>
-          <p>${this.upcommingLaunch?.name}</p>
-        </li>
-        <li>
-          <p>ROCKET</p>
-          <p>Falcon-9</p>
-        </li>
-      </ul>
-
-      <ul class="listDateState ">
-        <li>
-          <p>DATE</p>
-          <p>${this.formatDate(this.upcommingLaunch?.date_local)}</p>
-        </li>
-        <li>
-          <p>STATE</p>
-          <p>Upcoming</p>
-        </li>            
-      </ul>     
+          <ul class="listDateState ">
+            <li>
+              <p>DATE</p>
+              <p>${this.formatDate(this.upcommingLaunch?.date_local)}</p>
+            </li>
+            <li>
+              <p>STATE</p>
+              <p>Upcoming</p>
+            </li>
+          </ul>
+        </section>
+        <span class="missionlogoContainer">
+          ${this.upcommingLaunch?.links.patch.small
+            ? html`
+                <img
+                  src="${this.upcommingLaunch?.links.patch.small}"
+                  alt="mission logo"
+                />
+              `
+            : html``}
+        </span>
       </article>
     `;
   }
