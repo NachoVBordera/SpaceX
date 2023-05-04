@@ -15,10 +15,13 @@ export class LaunchesPages extends LitElement {
 
   render() {
     return html`
-      <h1>Launches Page</h1>
-      <last-launch></last-launch>
-      <spacex-history></spacex-history>
       <upcomning-launch></upcomning-launch>
+      <spacex-history></spacex-history>
+      <last-launch></last-launch>
+      <nav>
+        <a href="/">HOME</a>
+        <a href="/launches">LAUNCHES</a>
+      </nav>
     `;
   }
 
