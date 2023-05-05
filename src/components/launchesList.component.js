@@ -17,7 +17,7 @@ export class LaunchesList extends LitElement {
 
   render() {
     return html`
-      <article class="">
+      <article class="launchesArticleContainer">
         <ul class="">
           ${this.launches
             ?.reverse()
@@ -32,4 +32,4 @@ export class LaunchesList extends LitElement {
   }
 }
 
-customElements.define("lainches-list", LaunchesList);
+customElements.define("launches-list", LaunchesList);

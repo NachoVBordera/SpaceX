@@ -1,5 +1,8 @@
+import "../components/upcommingLaunch.component";
+import "../components/lastLaunch.component";
+import "../components/spacexHistory.component";
+import "../ui/logoSpaceX.ui";
 import { LitElement, html } from "lit";
-import "../components/launchesList.component";
 
 export class HomePage extends LitElement {
   static get properties() {
@@ -12,9 +15,9 @@ export class HomePage extends LitElement {
 
   render() {
     return html`
-      <h1>Home Page</h1>
-
-      <lainches-list></lainches-list>
+      <upcomning-launch></upcomning-launch>
+      <last-launch></last-launch>
+      <spacex-history></spacex-history>
     `;
   }
 

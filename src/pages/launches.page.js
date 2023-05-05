@@ -1,7 +1,4 @@
-import "../components/upcommingLaunch.component";
-import "../components/lastLaunch.component";
-import "../components/spacexHistory.component";
-import "../ui/logoSpaceX.ui";
+import "../components/launchesList.component";
 import { LitElement, html } from "lit";
 
 export class LaunchesPages extends LitElement {
@@ -14,15 +11,7 @@ export class LaunchesPages extends LitElement {
   }
 
   render() {
-    return html`
-      <upcomning-launch></upcomning-launch>
-      <spacex-history></spacex-history>
-      <last-launch></last-launch>
-      <nav>
-        <a href="/">HOME</a>
-        <a href="/launches">LAUNCHES</a>
-      </nav>
-    `;
+    return html` <launches-list></launches-list> `;
   }
 
   createRenderRoot() {
