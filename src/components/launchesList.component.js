@@ -18,10 +18,10 @@ export class LaunchesList extends LitElement {
   render() {
     return html`
       <article class="launchesArticleContainer">
-        <ul class="">
-          ${this.launches
-            ?.reverse()
-            .map((launch) => html` <launch-element .launch="${launch}" />`)}
+        <ul class="LaunchesListContainer">
+          ${this.launches?.map(
+            (launch) => html` <launch-element .launch="${launch}" />`
+          )}
         </ul>
       </article>
     `;

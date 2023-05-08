@@ -1,4 +1,5 @@
 import { LitElement, html } from "lit";
+import "./missionStatus.ui";
 
 export class LaunchElement extends LitElement {
   static get properties() {
@@ -31,38 +32,42 @@ export class LaunchElement extends LitElement {
   render() {
     return html`
       <article class="launchArticle">
-        
-        <ul>  
+        <section class="launchListContainer">
+          <ul>
             <li>
-                <span>
+              <span class="imageContainer">
                 <img src="${this.launch?.links.patch.small}" alt="patch" />
-                </span>
-        
-            <li>
-                <p>STATUS</p>
-                <p> ${this.launch?.success}</p>
+              </span>
             </li>
             <li>
-                <p>MISSION NAME</p>
-                <p> ${this.launch?.name}</p>
+              <mission-status ?status="${this.launch?.success}" />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p>MISSION NAME</p>
+              <p>${this.launch?.name}</p>
             </li>
             <li>
-                <p>ROCKET</p>
-                <p>Falcon 9</p>
+              <p>ROCKET</p>
+              <p>Falcon 9</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p>DATE</p>
+              <p>${this.formatDate(this.launch?.date_utc)}</p>
             </li>
             <li>
-                <p>DATE</p>
-                <p>${this.formatDate(this.launch?.date_utc)}</p>
+              <p>MISSION NUMBER</p>
+              <p>${this.launch?.flight_number}</p>
             </li>
-            <li>
-                <p>MISSION NUMBER</p>
-                <p> ${this.launch?.flight_number}</p>
-            </li>
-            <li>
-                <a href="${this.launch?.links.webcast}">Watch Video</a>
-                <a href="${this.launch?.links.article}">Read Article</a>
-            </li>
-    
+          </ul>
+          <span>
+            <a href="${this.launch?.links.webcast}">Watch Video</a>
+            <a href="${this.launch?.links.article}">Read Article</a>
+          </span>
+        </section>
       </article>
     `;
   }

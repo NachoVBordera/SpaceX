@@ -44,36 +44,23 @@ body {
   background-position: 0 -16rem; */
 }
 
-/* HOME PAGE TEMPLATE */
-/* 
-.parent {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr) 0.5fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
-
-.div1 { grid-area: 1 / 1 / 2 / 2; }
-.div2 { grid-area: 1 / 2 / 3 / 3; }
-.div3 { grid-area: 2 / 1 / 3 / 2; }
-.div4 { grid-area: 3 / 1 / 4 / 3; }
-*/
-
 home-page {
   width: 100vw;
   height: 90vh;
 
   display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-  grid-auto-rows: 1fr;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 
   padding: 1rem;
+}
+
+.launchesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 nav {
@@ -96,15 +83,16 @@ nav > a {
 
 /* SPACEX HISTORY TODO:*/
 spacex-history {
-  grid-area: 1 / 2 / 3 / 3;
   display: block;
-  height: 100%;
+  max-height: 87vh;
+
   min-width: 40rem;
   overflow: scroll;
   border-radius: 22px;
 }
 
 .historyListContainer {
+  width: 100%;
   padding: 1rem;
   background-color: var(--background-color);
 }
@@ -116,6 +104,7 @@ spacex-history {
 }
 
 .entriesList {
+  height: min-content;
   padding-left: 1rem;
   margin: 1rem;
   border-left: 2px solid black;
@@ -157,16 +146,13 @@ spacex-history {
 
 /* UPCOMING LAUNCH TODO: */
 upcomning-launch {
-  grid-area: 1 / 1 / 2 / 2;
   height: 100%;
-  min-width: 40rem;
   display: block;
 }
 .upcomingLaunchArticle {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1fr, 20rem));
-  grid-template-rows: repeat(2, auto);
+  display: flex;
+  justify-content: end;
 
   font-family: var(--main-font);
   border-radius: 22px;
@@ -247,16 +233,14 @@ upcomning-launch {
 
 /* LAST LAUNCH  TODO: */
 last-launch {
-  grid-area: 2 / 1 / 3 / 2;
   display: block;
-  min-width: 40rem;
 }
 
 .lastLaunchArticle {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+
   border-radius: 22px;
   font-family: var(--main-font);
   background-color: var(--background-color);
@@ -269,11 +253,10 @@ last-launch {
   background-image: url("../public/icons/polygon.png");
   background-repeat: no-repeat, repeat;
   background-size: contain;
-  margin-right: 1rem;
 
   height: 12rem;
   width: 12rem;
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 img {
@@ -285,50 +268,204 @@ img {
   width: 70%;
 }
 
-@media (max-width: 1300px) {
-  .lastLaunchArticle {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* ///////////////////////////////////// */
+/* ////////////LAUNCHES PAGE//////////// */
+launches-page {
+  border-radius: 22px;
+  width: 100vw;
+  height: 90vh;
+  margin: 1rem;
+}
+/* LAUNCHES LIST */
+launches-list {
+  overflow: scroll;
+  display: block;
+  width: 100vw;
+  height: 75vh;
+}
+
+.launchesHeader {
+  display: inline-block;
+  height: 13vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: var(--main-font);
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.launchesHeader > h1 {
+  font-size: 4rem;
+}
+
+alctual-starlink {
+  justify-self: start;
+  align-self: center;
+  transform: scale(0.7);
+}
+
+.actualStarlinkArticle {
+  border-radius: 22px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.actualStarlinkArticle::before {
+  content: "";
+  position: relative;
+  top: 4.4rem;
+  left: 0.4rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: red;
   }
 }
 
-@media screen and (max-width: 768px) {
-}
-
-/* ///////////////////////////////////// */
-
-/* LAUNCHES LIST */
-launches-list {
-  display: block;
-  width: 100vw;
-  height: 90vh;
-  overflow: scroll;
-}
+/* LAUNCHES LIST CONTAINER */
 
 .launchesArticleContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.LaunchesListContainer {
   background-color: var(--background-color);
-  margin: 1rem 1rem;
+
   padding: 1rem;
-  border-radius: 22px;
+}
+
+.imageContainer {
+  display: block;
+  height: 6rem;
+  width: 6rem;
+  transform: scale(0.8);
 }
 
 .launchArticle {
   height: 100%;
   font-family: var(--main-font);
-  font-size: small;
+  text-align: center;
+  font-size: medium;
   background-color: var(--background-color);
-  border: 1px solid black;
-  margin: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
   border-radius: 22px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.33);
 }
 
-.launchArticle > ul {
-  border: 1px solid rgb(255, 0, 0);
-  height: 100%;
+.launchListContainer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+.launchListContainer > ul:first-child {
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-around;
+}
+
+.launchListContainer ul:not(:first-child) {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+}
+
+.launchListContainer ul:not(:first-child) li :first-child {
+  line-height: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.launchListContainer :last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: black;
+}
+
+/* MISSION STATUS */
+.missionStatus {
+  display: block;
+  border-radius: 22px;
+  width: max-content;
+  height: max-content;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.missionStatus :first-child {
+  font-weight: bold;
+  text-decoration: underline;
+}
+mission-status .failture {
+  background-color: rgb(218, 26, 26);
+}
+
+mission-status .success {
+  background-color: rgb(26, 168, 26);
+}
+
+@media (max-width: 1300px) {
+  .lastLaunchArticle {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .lastMission {
+    align-self: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .upcomingLaunchArticle {
+    height: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .launchListContainer {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .launchListContainer > ul:first-child {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

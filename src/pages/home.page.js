@@ -15,8 +15,10 @@ export class HomePage extends LitElement {
 
   render() {
     return html`
-      <upcomning-launch></upcomning-launch>
-      <last-launch></last-launch>
+      <section class="launchesSection">
+        <upcomning-launch></upcomning-launch>
+        <last-launch></last-launch>
+      </section>
       <spacex-history></spacex-history>
     `;
   }

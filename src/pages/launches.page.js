@@ -1,4 +1,5 @@
 import "../components/launchesList.component";
+import "../components/actuallStarlink.component";
 import { LitElement, html } from "lit";
 
 export class LaunchesPages extends LitElement {
@@ -11,7 +12,13 @@ export class LaunchesPages extends LitElement {
   }
 
   render() {
-    return html` <launches-list></launches-list> `;
+    return html`
+      <header class="launchesHeader">
+        <alctual-starlink></alctual-starlink>
+        <h1>SpaceX Launches</h1>
+      </header>
+      <launches-list></launches-list>
+    `;
   }
 
   createRenderRoot() {
