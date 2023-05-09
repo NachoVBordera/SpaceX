@@ -1,9 +1,9 @@
 import axios from "axios";
 
 export class LaunchesRepositoy {
-  async getAllLaunches() {
+  async getAllLaunches(query) {
     return await (
-      await axios.get("https://api.spacexdata.com/v4/launches/past")
+      await axios.post("https://api.spacexdata.com/v4/launches/query", query)
     ).data;
   }
 

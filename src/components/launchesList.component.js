@@ -6,13 +6,21 @@ export class LaunchesList extends LitElement {
   static get properties() {
     return {
       launches: { type: Object },
+      displayCount: { type: Number },
     };
   }
 
   async connectedCallback() {
     super.connectedCallback();
+    this.displayCount = 1;
     this.launches = await AllLaunchesUseCase.execute();
     console.log(this.launches);
+  }
+
+  async handleClick() {
+    this.displayCount += 1;
+    const nextPage = await AllLaunchesUseCase.execute(this.displayCount);
+    this.launches = [...this.launches, ...nextPage];
   }
 
   render() {
@@ -23,6 +31,7 @@ export class LaunchesList extends LitElement {
             (launch) => html` <launch-element .launch="${launch}" />`
           )}
         </ul>
+        <button @click="${this.handleClick}">Load more</button>
       </article>
     `;
   }
