@@ -13,27 +13,6 @@ export class UpcomingLaunch extends LitElement {
     this.upcommingLaunch = await UpcomingLaunchUseCase.execute();
   }
 
-  formatDate(dateString) {
-    const date = new Date(dateString);
-    const MONTHNAMES = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const month = MONTHNAMES[date.getMonth()];
-    const year = date.getFullYear();
-    return `${month} ${year}`;
-  }
-
   render() {
     return html`
       <article class="upcomingLaunchArticle">
@@ -52,7 +31,7 @@ export class UpcomingLaunch extends LitElement {
 
             <li>
               <p>DATE</p>
-              <p>${this.formatDate(this.upcommingLaunch?.date_local)}</p>
+              <p>${this.upcommingLaunch?.date_local}</p>
             </li>
             <li>
               <p>STATE</p>

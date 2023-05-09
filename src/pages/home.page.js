@@ -16,6 +16,7 @@ export class HomePage extends LitElement {
   render() {
     return html`
       <section class="launchesSection">
+        <main-logo></main-logo>
         <upcomning-launch></upcomning-launch>
         <last-launch></last-launch>
       </section>

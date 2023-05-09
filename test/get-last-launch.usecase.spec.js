@@ -13,7 +13,7 @@ describe("Last launch useCase", () => {
         getLastLaunches: () => {
           return {
             name: "FalconSat",
-            date_utc: "2006-03-24T22:30:00.000Z",
+            date_utc: "MAR 2006",
           };
         },
       };
@@ -24,5 +24,6 @@ describe("Last launch useCase", () => {
 
     expect(typeof lastLaunch).toBe("object");
     expect(lastLaunch).toHaveProperty("name");
+    expect(lastLaunch.date_utc).toBe("MAR 2006");
   });
 });

@@ -14,27 +14,6 @@ export class LastLaunch extends LitElement {
     console.log(this.lastLaunch);
   }
 
-  formatDate(dateString) {
-    const date = new Date(dateString);
-    const MONTHNAMES = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const month = MONTHNAMES[date.getMonth()];
-    const year = date.getFullYear();
-    return `${month} ${year}`;
-  }
-
   render() {
     return html`
       <article class="lastLaunchArticle">
@@ -52,8 +31,9 @@ export class LastLaunch extends LitElement {
             </li>
             <li>
               <p>DATE</p>
-              <p>${this.formatDate(this.lastLaunch?.date_local)}</p>
+              <p>${this.lastLaunch?.date_local}</p>
             </li>
+
             <li>
               <p>STATE</p>
               <p>${this.lastLaunch?.success ? "Success" : "Failed"}</p>

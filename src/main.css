@@ -469,3 +469,16 @@ mission-status .success {
     gap: 2rem;
   }
 }
+
+.mainLogo {
+  background-color: var(--background-color);
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  width: 100vh;
+  height: 100vw;
+}

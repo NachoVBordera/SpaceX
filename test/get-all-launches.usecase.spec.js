@@ -20,7 +20,8 @@ describe("All launches useCase", () => {
 
     const response = await AllLaunchesUseCase.execute();
 
-    expect(response.length).toBe(187);
-    expect(response[0].name).toBe(LAUNCHES[0].name);
+    expect(response.length).toBe(10);
+    expect(response[0].name).toBe(LAUNCHES.docs[0].name);
+    expect(response[0].date_utc).toBe("Mar 2006");
   });
 });

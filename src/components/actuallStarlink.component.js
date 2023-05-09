@@ -36,7 +36,7 @@ export class ActuallStarlink extends LitElement {
         </svg>
 
         <p>
-          There are currently ${this.actuallStarlink.length} active Starlink on
+          There are currently ${this.actuallStarlink?.length} active Starlink on
           the low Earth orbit.
         </p>
       </article>

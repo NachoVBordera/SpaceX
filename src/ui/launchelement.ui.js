@@ -8,27 +8,6 @@ export class LaunchElement extends LitElement {
     };
   }
 
-  formatDate(dateString) {
-    const date = new Date(dateString);
-    const MONTHNAMES = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const month = MONTHNAMES[date.getMonth()];
-    const year = date.getFullYear();
-    return `${month} ${year}`;
-  }
-
   render() {
     return html`
       <article class="launchArticle">
@@ -56,7 +35,7 @@ export class LaunchElement extends LitElement {
           <ul>
             <li>
               <p>DATE</p>
-              <p>${this.formatDate(this.launch?.date_utc)}</p>
+              <p>${this.launch?.date_utc}</p>
             </li>
             <li>
               <p>MISSION NUMBER</p>
