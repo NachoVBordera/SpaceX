@@ -1,6 +1,5 @@
 import { LitElement, html } from "lit";
 import { LastLaunchUseCase } from "../usecases/last-launch.usecase";
-import YTIcon from "../../public/icons/youtube.svg";
 
 export class LastLaunch extends LitElement {
   static get properties() {
