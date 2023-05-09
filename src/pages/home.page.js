@@ -2,19 +2,10 @@ import "../components/upcommingLaunch.component";
 import "../components/lastLaunch.component";
 import "../components/spacexHistory.component";
 import "../ui/logoSpaceX.ui";
-import { LitElement, html } from "lit";
 
-export class HomePage extends LitElement {
-  static get properties() {
-    return {};
-  }
-
-  async connectedCallback() {
-    super.connectedCallback();
-  }
-
-  render() {
-    return html`
+export class HomePage extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
       <section class="launchesSection">
         <main-logo></main-logo>
         <upcomning-launch></upcomning-launch>
@@ -22,10 +13,6 @@ export class HomePage extends LitElement {
       </section>
       <spacex-history></spacex-history>
     `;
-  }
-
-  createRenderRoot() {
-    return this;
   }
 }
 

@@ -31,36 +31,34 @@
 
 body {
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  max-height: 100vh;
   background-color: black;
 
   /*   background-image: url("../public/icons/backgraund2.png");
   background-repeat: no-repeat, repeat;
   background-size: cover;
-  background-position: 0 -16rem; */
+  background-position: 0 -22rem; */
 }
 
 home-page {
   width: 100vw;
   height: 90vh;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  display: flex;
+  flex-direction: row;
   gap: 1rem;
   justify-content: center;
   align-items: center;
-
   padding: 1rem;
 }
 
 .launchesSection {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   gap: 1rem;
+  width: 60%;
+  height: 100%;
 }
 
 nav {
@@ -84,9 +82,8 @@ nav > a {
 /* SPACEX HISTORY TODO:*/
 spacex-history {
   display: block;
-  max-height: 87vh;
-
-  min-width: 40rem;
+  max-height: 100%;
+  width: 40%;
   overflow: scroll;
   border-radius: 22px;
 }
@@ -146,43 +143,35 @@ spacex-history {
 
 /* UPCOMING LAUNCH TODO: */
 upcomning-launch {
-  height: 100%;
+  width: 100%;
+  height: 30%;
   display: block;
 }
 .upcomingLaunchArticle {
-  position: relative;
-  display: flex;
-  justify-content: end;
-
+  height: 100%;
   font-family: var(--main-font);
   border-radius: 22px;
-}
-
-.launchSection {
-  align-self: end;
-  justify-self: end;
-
-  width: 70%;
-  height: max-content;
-  padding: 1rem;
-
-  border-radius: 22px 22px 22px 0;
   background-color: var(--background-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.launchSection > h2 {
+.upcomingLaunchArticle > h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 1rem 0;
 }
 
 .listData {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-template-rows: repeat(3, auto);
-  justify-content: space-around;
-  gap: 1rem;
-  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .listData li :first-child {
@@ -190,7 +179,7 @@ upcomning-launch {
 
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: underline;
 }
 
@@ -198,49 +187,39 @@ upcomning-launch {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   text-align: center;
 }
 
-.listData li a {
-  width: max-content;
-  margin: 1rem auto;
-}
 .listData li a svg {
-  transform: scale(2);
+  transform: scale(1.5);
 }
 
 .listData li a svg:hover {
   transform: scale(2.1);
 }
 
-.missionlogoContainer {
-  /* TODO: */
-  background-color: var(--background-color);
-  border-radius: 22px 0 0 22px;
-  height: 50%;
-  width: 30%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.missionlogoContainer:before {
-  background-image: url("../public/icons/polygon.png");
-  background-repeat: no-repeat, repeat;
-  background-size: contain;
+main-logo {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* LAST LAUNCH  TODO: */
 last-launch {
   display: block;
+  width: 100%;
+  height: 50%;
 }
 
 .lastLaunchArticle {
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-
+  justify-content: space-between;
+  padding: 2rem;
   border-radius: 22px;
   font-family: var(--main-font);
   background-color: var(--background-color);
@@ -262,10 +241,58 @@ last-launch {
 img {
   transform: scale(0.6);
 }
+.lastMissionSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-.lastMission {
+.lastLaunchArticle > h2 {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+
+  text-align: center;
+  font-size: 2.5rem;
+  height: 100%;
+}
+
+.LastLaunchListData {
   background-color: transparent;
-  width: 70%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.LastLaunchListData > li :first-child {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid black;
+}
+
+.LastLaunchListData > li :nth-child(2) {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.LastLaunchListData a {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 22px;
+  text-overflow: ellipsis;
+}
+
+.LastLaunchListData a:hover {
+  color: white;
+  background-color: black;
 }
 
 /* ///////////////////////////////////// */
@@ -468,10 +495,6 @@ mission-status .success {
     flex-direction: column;
     gap: 2rem;
   }
-}
-
-.mainLogo {
-  background-color: var(--background-color);
 }
 
 .loader {
