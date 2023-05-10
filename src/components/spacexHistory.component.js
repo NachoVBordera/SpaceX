@@ -12,7 +12,6 @@ export class SpaceXHistory extends LitElement {
   async connectedCallback() {
     super.connectedCallback();
     this.history = await HistoryUseCase.execute();
-    console.log(this.history);
   }
 
   render() {

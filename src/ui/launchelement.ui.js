@@ -24,21 +24,21 @@ export class LaunchElement extends LitElement {
           </ul>
           <ul>
             <li>
-              <p>MISSION NAME</p>
+              <p>Mission name</p>
               <p>${this.launch?.name}</p>
             </li>
             <li>
-              <p>ROCKET</p>
+              <p>Rocket</p>
               <p>Falcon 9</p>
             </li>
           </ul>
           <ul>
             <li>
-              <p>DATE</p>
+              <p>Date</p>
               <p>${this.launch?.date_utc}</p>
             </li>
             <li>
-              <p>MISSION NUMBER</p>
+              <p>Mission Number</p>
               <p>${this.launch?.flight_number}</p>
             </li>
           </ul>

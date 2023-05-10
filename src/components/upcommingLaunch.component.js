@@ -16,24 +16,24 @@ export class UpcomingLaunch extends LitElement {
   render() {
     return html`
       <article class="upcomingLaunchArticle">
-        <h2>Upcoming Launch</h2>
+        <h2>Upcoming launch</h2>
 
         <ul class="listData">
           <li>
-            <p>MISSION NAME</p>
+            <p>Mission name</p>
             <p>${this.upcommingLaunch?.name}</p>
           </li>
           <li>
-            <p>ROCKET</p>
+            <p>Rocket</p>
             <p>Falcon-9</p>
           </li>
 
           <li>
-            <p>DATE</p>
+            <p>Date</p>
             <p>${this.upcommingLaunch?.date_local}</p>
           </li>
           <li>
-            <p>STATE</p>
+            <p>State</p>
             <p>Upcoming</p>
           </li>
         </ul>

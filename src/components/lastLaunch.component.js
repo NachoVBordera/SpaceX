@@ -11,7 +11,6 @@ export class LastLaunch extends LitElement {
   async connectedCallback() {
     super.connectedCallback();
     this.lastLaunch = await LastLaunchUseCase.execute();
-    console.log(this.lastLaunch);
   }
 
   render() {
@@ -21,30 +20,30 @@ export class LastLaunch extends LitElement {
         <section class="lastMissionSection">
           <ul class="LastLaunchListData">
             <li>
-              <p>MISSION NAME</p>
+              <p>Mission name</p>
               <p>${this.lastLaunch?.name}</p>
             </li>
             <li>
-              <p>ROCKET</p>
+              <p>Rocket</p>
               <p>Falcon-9</p>
             </li>
             <li>
-              <p>DATE</p>
+              <p>Date</p>
               <p>${this.lastLaunch?.date_local}</p>
             </li>
           </ul>
 
           <ul class="LastLaunchListData">
             <li>
-              <p>STATE</p>
+              <p>State</p>
               <p>${this.lastLaunch?.success ? "Success" : "Failed"}</p>
             </li>
             <li>
-              <p>ARTICLE</p>
+              <p>Article</p>
               <a href="${this.lastLaunch?.links.article}">Read more</a>
             </li>
             <li>
-              <p>WATCH</p>
+              <p>Watch</p>
               <a href="${this.lastLaunch?.links.webcast}">Watch Video</a>
             </li>
           </ul>

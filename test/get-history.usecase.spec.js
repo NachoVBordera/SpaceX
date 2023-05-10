@@ -11,18 +11,21 @@ describe("Get history useCase", () => {
     LaunchesRepositoy.mockImplementation(() => {
       return {
         getHistory: () => {
-          return {
-            title: "Falcon 1 Makes History",
-            details:
-              "Falcon 1 becomes the first privately developed liquid fuel rocket to reach Earth orbit.",
-          };
+          return [
+            {
+              title: "Falcon 1 Makes History",
+              details:
+                "Falcon 1 becomes the first privately developed liquid fuel rocket to reach Earth orbit.",
+            },
+          ];
         },
       };
     });
 
     const history = await HistoryUseCase.execute();
+
     expect(typeof history).toBe("object");
-    expect(history).toHaveProperty("title");
-    expect(history).toHaveProperty("details");
+    expect(history[0]).toHaveProperty("title");
+    expect(history[0]).toHaveProperty("details");
   });
 });
