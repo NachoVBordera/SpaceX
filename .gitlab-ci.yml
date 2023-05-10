@@ -19,7 +19,7 @@ variables:
   GIT_DEPTH: "0" # Tells git to fetch all the branches of the project, required by the analysis task
 
 test:
-  state: Test
+  stage: Test
   image: node:18.10.0-alpine3.16
   script:
     - npm run test
