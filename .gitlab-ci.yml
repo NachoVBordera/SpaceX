@@ -24,7 +24,7 @@ test:
   script:
     - npm ci
     - npm run test
-    - npm run test:cy
+    - npm run test:ci
 
 sonarcloud-check:
   stage: Sonarcloud
