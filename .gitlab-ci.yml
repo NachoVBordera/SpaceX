@@ -20,7 +20,7 @@ variables:
 
 test:
   stage: Test
-  image: node:18.10.0-alpine3.16
+  image: cypress/base
   script:
     - npm ci
     - npm run test
