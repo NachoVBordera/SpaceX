@@ -21,6 +21,8 @@ variables:
 test:
   stage: Test
   image: node:18.10.0-alpine3.16
+  dependencies:
+    - build
   script:
     - npm run test
     - npm run test:cy
