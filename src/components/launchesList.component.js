@@ -30,8 +30,12 @@ export class LaunchesList extends LitElement {
           ${this.launches?.map(
             (launch) => html` <launch-element .launch="${launch}" />`
           )}
+          <li class="buttonLoadContainer">
+            <button @click="${this.handleClick}" class="loadMore">
+              Load more
+            </button>
+          </li>
         </ul>
-        <button @click="${this.handleClick}">Load more</button>
       </article>
     `;
   }

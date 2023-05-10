@@ -5,8 +5,8 @@ export class LaunchesPages extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header class="launchesHeader">
-        <alctual-starlink></alctual-starlink>
         <h1>SpaceX Launches</h1>
+        <alctual-starlink></alctual-starlink>
       </header>
       <launches-list></launches-list>
     `;
