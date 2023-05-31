@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683739578827" clover="3.2.0">
-  <project timestamp="1683739578827" name="All files">
-    <metrics statements="29" coveredstatements="24" conditionals="2" coveredconditionals="2" methods="13" coveredmethods="8" elements="44" coveredelements="34" complexity="0" loc="29" ncloc="29" packages="4" files="8" classes="8"/>
+<coverage generated="1685535691644" clover="3.2.0">
+  <project timestamp="1685535691644" name="All files">
+    <metrics statements="37" coveredstatements="31" conditionals="2" coveredconditionals="2" methods="15" coveredmethods="9" elements="54" coveredelements="42" complexity="0" loc="37" ncloc="37" packages="4" files="9" classes="9"/>
     <package name="src.repositories">
-      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="launches.repository.js" path="/home/nacho/Escritorio/Kairos/spaceX/src/repositories/launches.repository.js">
-        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="launches.repository.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\repositories\launches.repository.js">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.usecases">
-      <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
-      <file name="get-all-launches.usecase.js" path="/home/nacho/Escritorio/Kairos/spaceX/src/usecases/get-all-launches.usecase.js">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+      <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <file name="get-all-launches.usecase.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\usecases\get-all-launches.usecase.js">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
-      <file name="get-all-starlink.usecase.js" path="/home/nacho/Escritorio/Kairos/spaceX/src/usecases/get-all-starlink.usecase.js">
+      <file name="get-all-starlink.usecase.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\usecases\get-all-starlink.usecase.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="history.usecase.js" path="/home/nacho/Escritorio/Kairos/spaceX/src/usecases/history.usecase.js">
+      <file name="history.usecase.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\usecases\history.usecase.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
-      <file name="last-launch.usecase.js" path="/home/nacho/Escritorio/Kairos/spaceX/src/usecases/last-launch.usecase.js">
+      <file name="last-launch.usecase.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\usecases\last-launch.usecase.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
       </file>
-      <file name="upcomung-launch.usecase.js" path="/home/nacho/Escritorio/Kairos/spaceX/src/usecases/upcomung-launch.usecase.js">
+      <file name="upcomung-launch.usecase.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\usecases\upcomung-launch.usecase.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
@@ -49,8 +53,8 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="formatDate.js" path="/home/nacho/Escritorio/Kairos/spaceX/src/utils/formatDate.js">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="formatDate.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\utils\formatDate.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
@@ -59,10 +63,17 @@
         <line num="18" count="13" type="stmt"/>
         <line num="19" count="13" type="stmt"/>
       </file>
+      <file name="getRocketName.js" path="C:\Users\nacho\Desktop\Kairos\spacex\src\utils\getRocketName.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+      </file>
     </package>
     <package name="test.fixtures">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="allLaunches.js" path="/home/nacho/Escritorio/Kairos/spaceX/test/fixtures/allLaunches.js">
+      <file name="allLaunches.js" path="C:\Users\nacho\Desktop\Kairos\spacex\test\fixtures\allLaunches.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>

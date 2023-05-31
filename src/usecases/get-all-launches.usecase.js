@@ -1,5 +1,6 @@
 import { LaunchesRepositoy } from "../repositories/launches.repository";
 import { formatDate } from "../utils/formatDate";
+import { getRocktName } from "../utils/getRocketName";
 export class AllLaunchesUseCase {
   static async execute(num) {
     const query = {
@@ -10,12 +11,16 @@ export class AllLaunchesUseCase {
     };
     const repository = new LaunchesRepositoy();
     const launches = await repository.getAllLaunches(query);
+    const mylaunches = await launches.docs.map(async (launch) => {
+      const rocketname = await getRocktName(launch.rocket);
 
-    return launches.docs.map((launch) => {
       return {
         ...launch,
         date_utc: formatDate(launch.date_utc),
+        rocket: rocketname,
       };
     });
+    const resolvedLaunches = await Promise.all(mylaunches);
+    return resolvedLaunches;
   }
 }

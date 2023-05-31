@@ -29,7 +29,7 @@ export class LaunchElement extends LitElement {
             </li>
             <li>
               <p>Rocket</p>
-              <p>Falcon 9</p>
+              <p>${this.launch?.rocket}</p>
             </li>
           </ul>
           <ul>

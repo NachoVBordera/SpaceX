@@ -14,6 +14,7 @@ export class LaunchesList extends LitElement {
     super.connectedCallback();
     this.displayCount = 1;
     this.launches = await AllLaunchesUseCase.execute();
+    console.log(this.launches);
   }
 
   async handleClick() {

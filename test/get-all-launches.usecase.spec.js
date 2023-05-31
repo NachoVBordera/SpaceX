@@ -15,6 +15,11 @@ describe("All launches useCase", () => {
         getAllLaunches: () => {
           return LAUNCHES;
         },
+        getRocket: () => {
+          return {
+            name: "falcon 9",
+          };
+        },
       };
     });
 

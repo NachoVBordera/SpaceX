@@ -30,4 +30,10 @@ export class LaunchesRepositoy {
       await axios.get("https://api.spacexdata.com/v4/launches/latest")
     ).data;
   }
+
+  async getRocket(id) {
+    return await (
+      await axios.get(`https://api.spacexdata.com/v4/rockets/${id}`)
+    ).data;
+  }
 }
