@@ -6,12 +6,18 @@ import "../ui/logoSpaceX.ui";
 export class HomePage extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+    
       <section class="launchesSection">
         <main-logo></main-logo>
         <upcomning-launch></upcomning-launch>
         <last-launch></last-launch>
       </section>
       <spacex-history></spacex-history>
+    
+     
+    
+
+    
     `;
   }
 }

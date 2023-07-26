@@ -31,10 +31,19 @@ body {
 }
 
 /* /////HOME PAGE///// */
+.maincontainer {
+  border: 4px solid rgb(35, 35, 35);
+  border-radius: 22px;
+  margin: 0 auto;
+  max-width: 1500px;
+  background-image: url(../public/images/backgraund.png);
+  background-position: center;
+  background-size: cover;
+}
 home-page {
-  width: 100vw;
-  height: 90vh;
+  max-width: 1500px;
 
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +243,7 @@ last-launch {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   font-family: var(--main-font);
 
@@ -275,7 +284,7 @@ img {
   text-orientation: sideways;
   transform: rotate(180deg);
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 .LastLaunchListData {
@@ -303,7 +312,6 @@ img {
 .LastLaunchListData > li :nth-child(2) {
   text-align: center;
   text-decoration: none;
-
   color: black;
 }
 
@@ -313,9 +321,9 @@ img {
 
 .LastLaunchListData a {
   text-align: center;
-  text-overflow: ellipsis;
-
-  border: 1px solid black;
+  white-space: nowrap;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.102);
   border-radius: 22px;
 
   padding: 10px;
@@ -326,11 +334,11 @@ img {
   background-color: black;
 }
 
-/* ///////////////////////////////////// */
+/* /////TODO://////////////////////////////// */
 /* ////////////LAUNCHES PAGE//////////// */
 
 launches-page {
-  width: 100vw;
+  max-width: 1500px;
   height: 90vh;
 
   display: flex;
@@ -531,10 +539,19 @@ mission-status .success {
   color: black;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1400px) {
+  .spanImagecontainer {
+    display: none;
+  }
+}
+
+@media (max-width: 1015px) {
+  .maincontainer {
+    background-image: none;
+    border: none;
+  }
   home-page {
     height: max-content;
-
     flex-direction: column;
   }
   .mainLogo {
