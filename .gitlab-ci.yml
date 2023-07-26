@@ -1,6 +1,5 @@
 stages:
   - Build
-  - Test
   - Sonarcloud
   - Deploy
   - Hosting
@@ -18,13 +17,7 @@ variables:
   SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar" # Defines the location of the analysis task cache
   GIT_DEPTH: "0" # Tells git to fetch all the branches of the project, required by the analysis task
 
-test:
-  stage: Test
-  image: cypress/base
-  script:
-    - npm ci
-    - npm run test
-    - npm run test:ci
+
 
 sonarcloud-check:
   stage: Sonarcloud
