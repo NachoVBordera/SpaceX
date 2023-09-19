@@ -10,9 +10,9 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://i.postimg.cc/1tjNJ2dd/Captura-de-pantalla-2023-09-19-213917.png" alt="project-screenshot" width="250" height="400/">
+<img src="https://i.postimg.cc/1tjNJ2dd/Captura-de-pantalla-2023-09-19-213917.png" alt="project-screenshot" width="400" height="400/">
 
-<img src="https://i.postimg.cc/524L9B8n/Captura-de-pantalla-2023-09-19-214030.png" alt="project-screenshot" width="250" height="400/">
+<img src="https://i.postimg.cc/524L9B8n/Captura-de-pantalla-2023-09-19-214030.png" alt="project-screenshot" width="400" height="400/">
 
 <h2>🛠️ Installation Steps:</h2>
 
@@ -33,10 +33,6 @@ npm install
 ```
 npm run start
 ```
-
-<h2>🍰 Contribution Guidelines:</h2>
-
-  
   
 <h2>💻 Built with</h2>
 
